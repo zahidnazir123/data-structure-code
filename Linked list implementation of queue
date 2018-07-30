@@ -1,0 +1,63 @@
+#include<stdio.h>
+Struct node
+{
+Int data;
+Struct node*next;
+};
+Struct node *front=null,rear=null,temp)
+Int main()
+{
+Int ch;
+While(1)
+{
+Printf("1 forenque\n 2 for deque\n 3 for view");
+Scanf("%d",&ch);
+Item=deque;
+Printf("deque");
+If (ch==1) enque();
+Else if(ch==2) deque();
+Else if(ch==3) view();
+Else break;
+}
+void enque()
+{
+temp=(Struct node*) malloc(size of Struct node);
+Printf("enter element")
+Scanf("%d", &temp->data);
+temp->next=null
+If (temp==null);
+Printf("overflow")
+Else
+{
+If(rear==null &&front==null)
+{
+rear=temp
+Front=temp;
+}
+else
+{
+rear5->next=temp;
+rear=temp;
+}
+}
+Int deque()
+{
+If(front==null)
+Printf("underflow");
+Else
+
+Item=front->data;
+temp=front
+front=front->next
+free5(front);
+return item;
+}
+void view()
+{
+Struct node *trav;
+trav=front;
+while(trav!=null)
+{
+Printf("%d",trav->data);
+trav=trav->next;
+}
