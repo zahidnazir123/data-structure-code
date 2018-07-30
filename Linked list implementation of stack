@@ -1,0 +1,77 @@
+#include<stdio.h>
+Struct node
+{
+Int data;
+Struct node*next;
+{;
+Struct node *top =null;
+Int main()
+{
+Int ch;
+do
+{
+Printf("1 for push\n 2 for pop\n 3 for view");
+Scanf("%d",&ch);
+If (ch==1);
+{
+Printf("enter data");
+Scanf("%d",&item);
+Push(item);
+}
+elseif(ch==2)
+{
+item=pop();
+Printf("%d",item(;
+}
+elseif(ch==3)
+disp();
+else break;
+}
+while(1);
+Void push(Int item)
+{
+Struct node*temp;
+Temp=(Struct node*)malloc(size of Struct node);
+If (temp==null)
+Printf("overflow");
+
+else
+{
+temp->data=item;
+temp->next=null;
+If(top==null)
+top=temp;
+
+else
+{temp->next=top;
+top=temp;
+}
+Int pop()
+{
+Struct node*temp;
+If(top==null)
+{
+Printf("underflow");
+}
+Else
+{
+Temp=top
+Top=top->next;
+item=temp->data;
+Free(temp);
+Return item;
+}
+}
+Void disp()
+{
+If (top==null)
+Printf("stack empty");
+Else
+trav=top;
+While(trav!=null)
+{
+Printf("%d",trav->data);
+trav=trav->next;
+}
+}
+
