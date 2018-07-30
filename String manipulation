@@ -1,0 +1,18 @@
+#include<stdio.h>
+Int main()
+{
+Int l,i;
+Char str[20];
+Printf("enter string");
+gets(str);
+l=strlen (str);
+for(i=0;i<l/2;i++)
+{
+if(str[i]!=str[l-1-i])
+{
+Printf("not palindrome");
+break;
+}
+if(i==l/2)
+printf("palindrome");
+}
