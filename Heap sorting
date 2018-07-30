@@ -1,0 +1,80 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+Struct node
+
+Int data;
+Struct node*next;
+}*start=null;
+
+Void radix_sorting()
+Int larger_dig();
+Int digit(Int num,Int k);
+temp=malloc(size of (Struct node));
+Temp->data=num_item;
+Temp->next=null;
+
+If(start==null)
+Start=temp;
+Else
+{
+q=start;
+While(q->next!=null)
+q=q->next;
+q->next=temp;
+}
+}
+Int count,k,dig,least_size,most_size;
+Struct node*p, *rear[10], *front[10];
+
+Least_sig=1;
+Most_sig=larger_dig(start);
+For(k=least_sig5;k<=most_sig; k++)
+{
+for(count=0; count<=9 ; count++)
+{
+rear[count] =null;
+Front[count] =null;
+}
+For(p=start; p!=null; p=pp->next)
+{
+dig= digit(p->data,k);
+Else
+Rear[count+1]=rear[count];
+Count++;
+}
+rear[9]->next=null;
+}
+}
+Int larger_dig()
+{
+Struct node *p=start;
+Int large=0,ndigit=0;
+
+While(p!=null)
+{
+If(p->data>large)
+Large=p->data;
+P=p->next;
+}
+while(large!=0)
+{
+ndigit++;
+Large=large/10;
+}
+return(ndigit);
+}
+Int digit(Int num,Int k)
+{
+Int digit,count;
+For(count=1; count<=k; count++)
+{
+Digit=num%10;
+Num=num/10;
+}
+return(digit);
+}
+
+
+
+
