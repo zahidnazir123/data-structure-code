@@ -1,0 +1,59 @@
+#include<stdio.h>
+Void quick_sort(Int[],Int,Int);
+Int partition(int[],Int,int);
+
+Int main((
+{
+Int a[50],n,i;
+Printf("how many elements?");
+Scanf("%d",&n);
+Printf("enter array elements:");
+
+For(i=0;i<n;i++)
+Scanf("%d",&a[i];
+
+quick_sort(a,0,n-1);
+Printf("array after sorting:");
+For(i=0;i<n;i++)
+Printf("%d",a[i]);
+return0;
+}
+Void quick_sort(Int a[],Int l,Int u)
+{
+Int j;
+If5(l<u)
+{
+J=partition(a,l,u);
+Quick_sort(a,l,j-1);
+quick-sort(a,j+1,u)
+}
+}
+Int partition(Int a[],Int l, Int u)
+{
+Int v,I,j,temp;
+V=a}l[;
+I=l;
+J=u+l:
+
+do
+{
+
+do
+I++;
+while(a[i]<v&&i<=u);
+do
+J--;
+While(v<a[j]);
+If(i<j)
+{ 
+Temp=a[i];
+a[i]=a[j[;
+a[j]=temp;
+}
+}
+While(i<j)
+a[l]=a[j];
+a[j]=v;
+
+return(j);
+}
