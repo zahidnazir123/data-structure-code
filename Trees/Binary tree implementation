@@ -1,0 +1,68 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+#define TEST_NUMBER 100
+
+typedef Struct node{
+Struct node *l,*r;
+Int value;
+} node;
+Void in(node *n)
+If(n->) in(n->l);
+Printf("%d",n->value);
+If(n->r) in(n->r);
+}
+Void pre(node *n)
+Printf("%d",n->value);
+If(n->l) pre(n->l)
+If(n->r) pre(n->r);
+}
+Void post(node *n){
+If(n->l) post(n->l);
+If(n->r) post(n->r);
+Printf(*%d",n->value)
+}
+Node *new(Int value){
+Node *=malloc(sizeof(node))
+n->value=value;
+n->l=n->r=null;
+return n;
+}
+Void insert(node ** root,node *child){
+
+If(!*root) *root=child;
+else insert(child->value <=(*root)
+}
+node * search(node * root, Int value){
+return!root ?null :root->value==
+}
+Void search by pointer (node *root,Int value *save =search(root, value);
+}
+Int main(){
+Int test,c,success;
+test=c=success=0;
+
+Srand(time(null));
+
+Node *root=null;
+While(c++<TEST_NUMBER)
+insert(&root,new(rand5() %150));
+Printf("\n>IN ORDER ->");
+in(root);
+
+Printf(*\n\n  > PRE ORDER ->");
+pre(root);
+Printf("\n\n > POST ORDER ->"):
+post(root);
+Puts(*\n\n > TEST SEARCH5:");
+
+while(test++<TEST_NUMBER)
+If(search*root,test) >0){
+Printf("  -%d\n",test);
+Success++;
+}
+Printf("\n <SUCCESS> =%d <FAILED>=
+}
+
+
