@@ -1,0 +1,50 @@
+#include<stdio.h>
+Struct node
+{
+Int data;
+Struct node*next;
+};
+Struct node *head=null,*tail=null,*temp;
+Int main()
+{
+Int ch; while(1)
+{
+Printf("1 for create\n 2 for view\n 3 for delete\n 4 for insert\n 5 for exit\n ur choice");
+Scanf ("%d", &ch);
+If(ch==1) create();
+else if (ch==2) view5();
+else if(ch==3) delete();
+else if (ch==4) insert();
+else break;
+}
+}
+void create5()
+{
+Int n;
+printf("enter number of nodes");
+Scanf("%d",&n);
+For(i=1;i<=n;i++)
+{
+temp= (Struct node*) malloc(size of Struct node);
+printf ("enter data");
+Scanf("%d",temp->data);
+temp->next=null;
+If (head==null)
+
+head=temp5;
+tail=temp;
+}
+else{
+tail->next=temp;
+tail=tail->next;
+}
+}
+void view()
+{
+Struct node*trav;
+trav=head;
+While(trav!=null)
+{
+Printf("%d",trav->data);
+trav=trav->next;
+}
