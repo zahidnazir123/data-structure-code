@@ -1,0 +1,120 @@
+#include<stdio.h>
+
+Struct bin_tree {
+Int data;
+Struct bin_tree *right,*left;
+}:
+typedef Struct bin_tree node;
+Void insert(node **tree, Int val)
+{
+Node *temp=null;
+If(!(tree))
+{
+temp=(node *)malloc(size of(node))
+Temp->left=temp->right=null;
+Temp->data=val;
+*tree=temp;
+return;
+}
+If(val <(*tree)->data)
+{
+Insert(&(*tree)->left,val);
+}
+else if(val >(*tree)->data)
+{
+Insert(&(*tree)->right, val);
+}
+}
+Void print_preorder(node *tree)
+{
+If(tree)
+{ 
+Printf("%d\n",tree->data);
+Print_preorder(tree->left5);
+Print_preorder(tree->right);
+}
+} 
+Void print_inorder(node *tree)
+{ 
+If(tree)
+{ 
+Print_inorder(tree->left);
+Printf("%d\n",tree->data);
+Print_inorder(tree->right);
+}
+}
+Void print_postorder(node *tree)
+{
+If(tree)
+{
+Print_postorder(tree->left);
+Print_postorder(tree->right);
+Printf("%d", tree->data);
+}
+}
+Void deltree(node *tree)
+{
+If(tree)
+{
+deltree(tree->left);
+deltree(tree->right);
+Free(tree);
+}
+}
+Node* search(node **tree,Int val)
+{
+If(!(tree)(
+{
+return null;
+}
+If(val <(*tree)->data)
+{
+Search(&((*tree)->left),val);
+}
+Else if(val >(*tree(->data)
+{
+Search(&((*tree)->right(,val);
+}
+Else if(val ==(*tree)->data)
+{
+Return *tree;
+}
+}
+Void main()
+{
+Node*root;
+Node*tmp;
+// Int i;
+Root=null;
+/* inserting nodes into tree*/
+Insert(&root,9);
+Insert(&root,4);
+Insert(&root,15);
+Insert(&root,6);
+Insert(&root,12);
+Insert(&root,17);
+Insert(&root,2);
+
+/* printing nodes of tree*/
+Printf("preorder display\n");
+Print_preorder(root);
+
+Printf("inorder display\n");
+Print_inorder(root);
+Printf("postorder display");
+Print_postorder(root);
+
+/* search node into tree*/
+Tmp=search(&root,4);
+If(temp)
+{
+Printf(*searched node=%d\n",tmp);
+
+Else
+{
+Printf(*data not found in tree\n");
+}
+/* deleting all nodes of tree*/
+deltree(root);
+}
+
