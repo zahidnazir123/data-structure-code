@@ -1,0 +1,24 @@
+#include<stdio.h>
+Int main
+{
+Int a[100],item,I,n,p;
+Printf("enter the array elements");
+Scanf("%d", &n);
+For(i=0;i<n;i++)
+{
+Printf("enter elements");
+Scanf("%d",&a[i]);
+}
+Printf("enter element to insert")
+Scanf("%d",&item);
+Printf("enter position of insertion");
+Scanf("%d",&p);
+For(i=n-1;i<p;i--)
+{
+a[i+1]=a[i];}
+/* insertion element */
+a[p]=item;
+n=n+1;
+For(i=0;i<n;i++)
+Printf("%d",a[i]);
+}
